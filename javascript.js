@@ -1,4 +1,16 @@
-firebase.initializeApp(config)
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyCIc9DoktG6znVkPYQHaxsU8mAxsDao3cA",
+    authDomain: "traindata-facc8.firebaseapp.com",
+    databaseURL: "https://traindata-facc8.firebaseio.com",
+    projectId: "traindata-facc8",
+    storageBucket: "traindata-facc8.appspot.com",
+    messagingSenderId: "359220768101",
+    appId: "1:359220768101:web:eb41735e2b6c5ce7"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 var trainData = firebase.database()
 
 $("#submit").on("click", function () {
@@ -38,3 +50,7 @@ database.ref("/secondPropertyName").on("value", function (snapshot) {
     //Getting the current value of secondPropertyName in the database
     var secondPropertyNameValue = snapshot.val();
 })
+
+
+
+
