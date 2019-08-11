@@ -12,6 +12,14 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var trainData = firebase.database()
+var trainRef = trainData.ref('trains')
+
+trainRef.push({
+    name: trainName,
+    destination: destination,
+    firstTrain: firstTrain,
+    frequency:frequency,
+})
 
 $("#submit").on("click", function () {
     event.preventDefault();
@@ -24,7 +32,10 @@ $("#submit").on("click", function () {
 
 })
 
-
+$(document).on("load","#trainTimes",function(){
+    trainRef()
+$("#trainTimes").append()
+})
 
 //Setting the value of the entire database
 database.ref().set({
