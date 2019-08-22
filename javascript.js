@@ -6,13 +6,17 @@
 // 5. Create a way to calculate the time way. Using difference between start and current time.
 //    Then take the difference and modulus by frequency. (This step can be completed in either 3 or 4)
 // Initialize Firebase
-var config = {
-    apiKey: "AIzaSyCcPFcbAjIsgXGQwE-A3AcOXkeD40qypE8",
-    authDomain: "train-times-93583.firebaseapp.com",
-    databaseURL: "https://train-times-93583.firebaseio.com",
-    storageBucket: "train-times-93583.appspot.com"
+var firebaseConfig = {
+    apiKey: "AIzaSyCIc9DoktG6znVkPYQHaxsU8mAxsDao3cA",
+    authDomain: "traindata-facc8.firebaseapp.com",
+    databaseURL: "https://traindata-facc8.firebaseio.com",
+    projectId: "traindata-facc8",
+    storageBucket: "traindata-facc8.appspot.com",
+    messagingSenderId: "359220768101",
+    appId: "1:359220768101:web:eb41735e2b6c5ce7"
 };
-firebase.initializeApp(config);
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 var trainData = firebase.database();
 // 2. Populate Firebase Database with initial data (in this case, I did this via Firebase GUI)
 // 3. Button for adding trains
